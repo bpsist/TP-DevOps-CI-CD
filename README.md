@@ -1,81 +1,91 @@
 # TP-DevOps 2024
 
-Requisitos
+## Requisitos
 
-    Python 3.x
-    Cliente MySQL. ej: Dbeaver, https://dbeaver.io/download/
-    Docker, docker compose
-    Node
-    REACT
+- **Python 3.x**
+- **Cliente MySQL** (Ejemplo: [Dbeaver](https://dbeaver.io/download/))
+- **Docker** y **Docker Compose**
+- **Node.js**
+- **REACT**
 
-Objetivo
+## Objetivo
 
-Aplicar conocimientos adquiridos en la materia Desarrollo y Operaciones para mejorar el CI/CD del proyecto dados, compuesto de 3 microservicios utilizando un proxy para que tanto front y back salgan por el mismo dominio.
-Objetivos específicos
+Aplicar los conocimientos adquiridos en la materia _Desarrollo y Operaciones_ para mejorar el CI/CD del proyecto dado, compuesto por 3 microservicios utilizando un proxy para que tanto el frontend como el backend salgan por el mismo dominio.
 
-    Automatizar los procesos de build y deploy de los microservicios dados para mejorar la entrega continua
-    Automatizar analisis de SAST del producto mitigando las vulnerabilidades actuales conocidas y teniendo en cuenta las buenas practicas.
-    Proponer mejoras al trabajo entregado
-    Documentar errores y soluciones aplicadas.
+### Objetivos Específicos
 
-Metodología
+- Automatizar los procesos de build y deploy de los microservicios dados para mejorar la entrega continua.
+- Automatizar el análisis de SAST del producto, mitigando las vulnerabilidades actuales conocidas y teniendo en cuenta las buenas prácticas.
+- Proponer mejoras al trabajo entregado.
+- Documentar errores y soluciones aplicadas.
 
-    Las soluciones propuestas serán presentadas en vivo, durante el horario de clases, de forma presencial.
-    Todos los puntos solicitados deberán quedar en los repositorios creados y distribuidos para este TP, proyecto que no este subido su ultima versión en la rama main (o la rama default) no será considerado al momento de cargar a nota.
-    Durante la presentación podemos realizar preguntas conceptuales.
+## Puntos de Entrega
 
-Puntos de entrega
-1. Pipeline en el repositorio
+### 1. Pipeline en el Repositorio
 
-    No debe haber secretos hardcodeados en los archivos del repositorio
+- **No debe haber secretos hardcodeados** en los archivos del repositorio.
 
-1.1 Seguridad en el Repositorio
+#### 1.1 Seguridad en el Repositorio
 
-    Escaneo de Secretos. Para cada microservicio
+- Escaneo de **Secretos** para cada microservicio.
 
-1.2 Escaneo/Linting de Código
+#### 1.2 Escaneo/Linting de Código
 
-    Para cada microservicio. El unico excento es el de BD. Debe generar artefactos
+- Para cada microservicio (excepción: base de datos).
+- **Debe generar artefactos**.
 
-1.3 Build
+#### 1.3 Build
 
-    1 Base de datos.
-    2 APIs en Distinto Lenguaje expuestos por medio del NGINX
-        Python
-        Node
-    1 Front End en NGINX
-        REACT
-    Push al Registry del LabSis
+- 1 Base de datos.
+- 2 APIs en distintos lenguajes expuestos por medio de NGINX:
+  - **Python**
+  - **Node.js**
+- 1 Frontend en NGINX: **REACT**.
+- **Push al Registry del LabSis**.
 
-1.4 Escaneo/Linting de Docker
+#### 1.4 Escaneo/Linting de Docker
 
-    Estático y Linting. Para cada microservicio. Debe generar artefactos
+- Estático y Linting para cada microservicio.
+- **Debe generar artefactos**.
 
-1.5 Deploy
+#### 1.5 Deploy
 
-    Usando SSH
-    Mostrar que los containers están corriendo
+- Usando **SSH**.
+- Mostrar que los **containers están corriendo**.
 
-2. Bitácora de pipeline ejecutado
+---
 
-En un archivo pipeline.md en el repositorio adjuntar imagenes de un pipeline exitoso e imagenes de cada uno de los jobs. Linkeado a esta sección.
+### 2. Bitácora de Pipeline Ejecutado
 
-    Las imágenes que se agreguen a los md colocarlas en una carpeta imgs en la raíz
+En un archivo `pipeline.md` en el repositorio, adjuntar:
 
-2. Verificación de deploy
+- **Imágenes de un pipeline exitoso** e imágenes de cada uno de los jobs.
+- **Linkeado a esta sección**.
+- Las imágenes deben colocarse en una carpeta `imgs` en la raíz del repositorio.
 
-En un archivo health-checks.md en el repositorio. Linkeado a esta sección. Este archivo debe tenes como verificar cada servicio deployado
-2. Glosario de errores
+---
 
-En un archivo errores.md en el repositorio. Linkeado a esta sección.
+### 3. Verificación de Deploy
 
-    Errores que enfrentaron: identificación de error y cómo lo solucionaron
+En un archivo `health-checks.md` en el repositorio, linkeado a esta sección:
 
-3. Conclusiones
+- Este archivo debe contener información sobre **cómo verificar cada servicio deployado**.
 
-En un archivo conclusiones.md en el repositorio. Linkeado a esta sección. Posibles mejoras al pipeline? Puntos de mejora
-Material
+---
 
-    Documentación oficial correspondiente
-    Clases
-    Chat GPT (importante que entiendan las respuesta que estan copiando/utilizando)
+### 4. Glosario de Errores
+
+En un archivo `errores.md` en el repositorio, linkeado a esta sección:
+
+- Errores que enfrentaron: identificación de error y cómo lo solucionaron.
+
+---
+
+### 5. Conclusiones
+
+En un archivo `conclusiones.md` en el repositorio, linkeado a esta sección:
+
+- Posibles mejoras al pipeline.
+- Puntos de mejora.
+
+---
